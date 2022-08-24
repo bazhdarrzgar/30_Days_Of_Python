@@ -145,10 +145,19 @@ An indentation is a white space in a text. Indentation in many languages is used
 **Example: Multiline Comment**
 
 ```shell
-"""This is multiline comment
+
+"""
+This is multiline comment
 multiline comment takes multiple lines.
 python is eating the world
 """
+
+'''
+This is multiline comment
+multiline comment takes multiple lines.
+python is eating the world
+'''
+
 ```
 
 ### Data types
@@ -188,8 +197,8 @@ python is eating the world
 
 #### List
 
-* using this quotes [] 
-* 
+* using this quotes [ ] 
+
 **Example:**
 
 ```py
@@ -201,7 +210,7 @@ python is eating the world
 
 #### Dictionary
 
-* using this quotes {} and this quotes [] inside if you want use it
+* using this quotes { } and this quotes [ ] inside if you want use it
 
 A Python **dictionary object** is an **unordered collection** of data in a key value pair format. 
 
@@ -220,7 +229,7 @@ A Python **dictionary object** is an **unordered collection** of data in a key v
 
 #### Tuple
 
-* using this quotes () 
+* using this quotes ( ) 
 
 A tuple is an **ordered collection** of different data types like list but tuples **can not be modified** once they are created. They are immutable.
 
@@ -236,7 +245,7 @@ A tuple is an **ordered collection** of different data types like list but tuple
 
 #### Set
 
-* using this quotes {} 
+* using this quotes { } 
 
 Unlike list and tuple, set is **not an ordered collection** of items. Like in Mathematics, set in Python stores **only unique items**.
 
