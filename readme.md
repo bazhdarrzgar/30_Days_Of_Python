@@ -1,5 +1,7 @@
 # 🐍 30 Days Of Python 
 
+<div align ="center">
+
 |# Day | Topics                                                    |
 |------|:---------------------------------------------------------:|
 | 01  |  [Introduction](./readme.md)|
@@ -33,6 +35,7 @@
 | 29 |  [Building API](./29_Day_Building_API/29_building_API.md)|
 | 30 |  [Conclusions](./30_Day_Conclusions/30_conclusions.md)|
 
+</div>
 
 - [🐍 30 Days Of Python](#-30-days-of-python)
 - [📘 Day 1](#-day-1)
@@ -56,6 +59,7 @@
     - [Exercise: Level 1](#exercise-level-1)
     - [Exercise: Level 2](#exercise-level-2)
     - [Exercise: Level 3](#exercise-level-3)
+
 
 # 📘 Day 1
 
