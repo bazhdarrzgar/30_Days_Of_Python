@@ -1,6 +1,6 @@
-# 🐍 30 Days Of Python 
-
 <div align ="center">
+
+# 🐍 30 Days Of Python 
 
 |# Day | Topics                                                    |
 |------|:---------------------------------------------------------:|
