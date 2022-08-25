@@ -1,21 +1,3 @@
-<div align="center">
-  <h1> 30 Days Of Python: Day 3 - Operators</h1>
-  <a class="header-badge" target="_blank" href="https://www.linkedin.com/in/asabeneh/">
-  <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
-  </a>
-  <a class="header-badge" target="_blank" href="https://twitter.com/Asabeneh">
-  <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/asabeneh?style=social">
-  </a>
-
-<sub>Author:
-<a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-<small> Second Edition: July, 2021</small>
-</sub>
-</div>
-
-[<< Day 2](../02_Day_Variables_builtin_functions/02_variables_builtin_functions.md) | [Day 4 >>](../04_Day_Strings/04_strings.md)
-
-![30DaysOfPython](../images/30DaysOfPython_banner3@2x.png)
 
 - [📘 Day 3](#-day-3)
   - [Boolean](#boolean)
@@ -30,7 +12,6 @@
 
 ## Boolean
 
-A boolean data type represents one of the two values: _True_ or _False_. The use of these data types will be clear once we start using the comparison operator. The first letter **T** for True and **F** for False should be capital unlike JavaScript.
 **Example: Boolean Values**
 
 ```py
@@ -40,11 +21,9 @@ print(False)
 
 ## Operators
 
-Python language supports several types of operators. In this section, we will focus on few of them.
-
 ### Assignment Operators
 
-Assignment operators are used to assign values to variables. Let us take = as an example. Equal sign in mathematics shows that two values are equal, however in Python it means we are storing a value in a certain variable and we call it assignment or a assigning value to a variable. The table below shows the different types of python assignment operators, taken from [w3school](https://www.w3schools.com/python/python_operators.asp).
+taken from [w3school](https://www.w3schools.com/python/python_operators.asp).
 
 ![Assignment Operators](../images/assignment_operators.png)
 
@@ -55,8 +34,8 @@ Assignment operators are used to assign values to variables. Let us take = as an
 - Multiplication(*): a * b
 - Division(/): a / b
 - Modulus(%): a % b
-- Floor division(//): a // b
 - Exponentiation(**): a ** b
+- Floor division(//): a // b
 
 ![Arithmetic Operators](../images/arithmetic_operators.png)
 
@@ -78,7 +57,7 @@ print('Modulus: ', 3 % 2)         # 1, Gives the remainder
 print('Exponentiation: ', 2 ** 3) # 9 it means 2 * 2 * 2
 ```
 
-**Example:Floats**
+**Example: Floats**
 
 ```py
 # Floating numbers
@@ -86,7 +65,7 @@ print('Floating Point Number, PI', 3.14)
 print('Floating Point Number, gravity', 9.81)
 ```
 
-**Example:Complex numbers**
+**Example: Complex numbers**
 
 ```py
 # Complex numbers
@@ -94,7 +73,7 @@ print('Complex number: ', 1 + 1j)
 print('Multiplying complex numbers: ',(1 + 1j) * (1 - 1j))
 ```
 
-Let's declare a variable and assign a number data type. I am going to use single character variable but remember do not develop a habit of declaring such types of variables. Variable names should be all the time mnemonic.
+Let's declare a variable and assign a number data type. 
 
 **Example:**
 
@@ -179,7 +158,7 @@ density = mass / volume # 1000 Kg/m^3
 
 ### Comparison Operators
 
-In programming we compare values, we use comparison operators to compare two values. We check if a value is greater or less or equal to other value. The following table shows Python comparison operators which was taken from [w3shool](https://www.w3schools.com/python/python_operators.asp).
+taken from [w3shool](https://www.w3schools.com/python/python_operators.asp).
 
 ![Comparison Operators](../images/comparison_operators.png)
 **Example: Comparison Operators**
@@ -227,7 +206,7 @@ print('4 is 2 ** 2:', 4 is 2 ** 2)   # True
 
 ### Logical Operators
 
-Unlike other programming languages python uses keywords _and_, _or_ and _not_ for logical operators. Logical operators are used to combine conditional statements:
+**Unlike other programming languages python uses keywords _and_, _or_ and _not_ for logical operators**. Logical operators are used to combine conditional statements:
 
 ![Logical Operators](../images/logical_operators.png)
 
@@ -311,7 +290,3 @@ You have lived for 3153600000 seconds.
 4 1 4 16 64
 5 1 5 25 125
 ```
-
-🎉 CONGRATULATIONS ! 🎉
-
-[<< Day 2](../02_Day_Variables_builtin_functions/02_variables_builtin_functions.md) | [Day 4 >>](../04_Day_Strings/04_strings.md)

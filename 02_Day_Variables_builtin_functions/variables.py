@@ -886,5 +886,3 @@ await               finally             nonlocal            yield
  
 '''
 
-
-print('========================== reversed() ========================== ')
