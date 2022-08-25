@@ -1,27 +1,14 @@
-<div align="center">
-  <h1> 30 Days Of Python: Day 2 - Variables, Builtin Functions</h1>
-  <a class="header-badge" target="_blank" href="https://www.linkedin.com/in/asabeneh/">
-  <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
-  </a>
-  <a class="header-badge" target="_blank" href="https://twitter.com/Asabeneh">
-  <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/asabeneh?style=social">
-  </a>
-
-<sub>Author:
-<a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-<small> Second Edition: July, 2021</small>
-</sub>
-
-</div>
-
-[<< Day 1](../readme.md) | [Day 3 >>](../03_Day_Operators/03_operators.md)
-
-![30DaysOfPython](../images/30DaysOfPython_banner3@2x.png)
-
 - [📘 Day 2](#-day-2)
   - [Built in functions](#built-in-functions)
+      - [**Example**](#example)
+      - [**Example**](#example-1)
   - [Variables](#variables)
-    - [Declaring Multiple Variable in a Line](#declaring-multiple-variable-in-a-line)
+      - [**Example**](#example-2)
+      - [**Example**:](#example-3)
+      - [**Example:**](#example-4)
+      - [**Example:**](#example-5)
+      - [**Example:**](#example-6)
+      - [**Example:**](#example-7)
   - [Data Types](#data-types)
   - [Checking Data types and Casting](#checking-data-types-and-casting)
   - [Numbers](#numbers)
@@ -33,37 +20,294 @@
 
 ## Built in functions
 
-In Python we have lots of built-in functions. Built-in functions are globally available for your use that mean you can make use of the built-in functions without importing or configuring. Some of the most commonly used Python built-in functions are the following: _print()_, _len()_, _type()_, _int()_, _float()_, _str()_, _input()_, _list()_, _dict()_, _min()_, _max()_, _sum()_, _sorted()_, _open()_, _file()_, _help()_, and _dir()_. In the following table you will see an exhaustive list of Python built-in functions taken from [python documentation](https://docs.python.org/3.9/library/functions.html).
+Built-in functions are globally available for your use that mean you can make use of the built-in functions without importing or configuring. Some of the most commonly used Python built-in functions are the following: 
+
+```py
+
+print(), 
+len(), 
+type(), 
+int(), 
+float(),
+str(),
+input(), 
+list(), 
+dict(), 
+min(), 
+max(), 
+sum(), 
+sorted(), 
+open(), 
+file(), 
+help(), 
+dir()
+
+```
 
 ![Built-in Functions](../images/builtin-functions.png)
 
-Let us open the Python shell and start using some of the most common built-in functions.
+#### **Example**
 
 ![Built-in functions](../images/builtin-functions_practice.png)
 
-Let us practice more by using different built-in functions
+```py
 
+print('Hello, World!') # Hello, World!
+len('Hello, World!') # 13
+type('Hello, World!') # <class 'str'>
+str(10)
+int('10')
+float(10)
+input('Enter your name:')
+
+
+
+a = 12
+b = -4
+c = 3+4j
+d = 7.90
+print(abs(a))
+print(abs(b))
+print(abs(c))
+print(abs(d))
+
+
+
+
+tuple = (0, True, False)
+x = all(tuple)
+print(x)
+
+
+
+sampledict = {0 : "Apple", 1 : "Orange"}
+x = all(sampledict)
+print(x)
+
+
+
+myset = {0, 1, 0}
+x = any(myset)
+print(x)
+
+
+
+a=5
+print(bin(a))
+
+
+
+print(round(4.5))
+print(round(-7.7))
+
+
+
+print(bin(4))
+print(bin(9))
+
+
+
+print(bool(0))
+print(bool(-4.5))
+print(bool(None))
+print(bool("False"))
+
+
+
+
+# Syntax: bytearray(source,encoding,errors)
+
+'''
+The values to function are optional.
+If any non-ascii value is given to the function, it gives the error -TypeError: string argument without an encoding.
+'''
+
+print(bytearray())
+print(bytearray('Python','utf-8'))
+
+
+
+
+# Syntax: Compile(source,filename,mode,flags=0,dont_inherit=False,optimize=-1)
+
+myCode = 'a = 7\nb=9\nresult=a*b\nprint("result =",result)'
+codeObject = compile(myCode, 'resultstring', 'exec')
+exec(codeObject)
+
+
+
+
+# Syntax: list([iterable])
+
+print(list()) #returns empty list
+stringobj = 'PALINDROME'
+print(list(stringobj))
+tupleobj = ('a', 'e', 'i', 'o', 'u')
+print(list(tupleobj))
+listobj = ['1', '2', '3', 'o', '10u']
+print(list(listobj))
+
+
+
+
+# Syntax: len([object])
+
+stringobj = 'PALINDROME'
+print(len(stringobj))
+tupleobj = ('a', 'e', 'i', 'o', 'u')
+print(len(tupleobj))
+listobj = ['1', '2', '3', 'o', '10u']
+print(len(listobj))
+
+
+
+
+# Syntax: input()
+
+
+
+# Syntax: callable(Object)
+
+def myFun(): 
+    return 5
+res = myFun 
+print(callable(res)) #function is called to get this value
+num1 = 15 * 5
+print(callable(num1))#no function is called 
+
+
+
+
+# Syntax: type(Object)
+# Syntax: type(name,bases,dict)
+
+tupleObj=(3,4,6,7,9)
+print(type(tupleObj))
+new1 = type('New', (object, ),
+dict(var1 ='LetsLearn', b = 2029))
+print(type(new1))
+
+
+
+# Syntax: str(object,encoding,errors)
+
+print(str('A1323'))
+b = bytes('pythön', encoding='utf-8')
+print(str(b, encoding='ascii', errors='ignore'))
+#errors='ignore' helps interpreter to ignore when it found a non Ascii charact
+
+
+
+# Syntax: sum([iterable],start)
+
+num = [2.5, 3, 4, -5]
+numSum = sum(num)
+print(numSum)
+numSum = sum(num, 20)
+print(numSum)
+
+
+# Syntax: sorted(iterable,key,reverse)
+
+sampleObj = (3,6,8,2,5,8,10)
+print(sorted(sampleObj,reverse=True))
+sampledict = {'a':'sss','g':'wq','t':2}
+print(sorted(sampledict,key= len))
+
+
+
+# Syntax: oct(number)
+
+print("The octal representation of 32 is " + oct(32)) 
+print("The octal representation of the"
+    " ascii value of 'A' is " + oct(ord('A'))) 
+print("The octal representation of the binary" " of 32 is " + oct(100000)) 
+print("The octal representation of the binary"
+                " of 23 is " + oct(0x17))
+
+
+
+# Syntax: pow(num1,num2)
+
+print(pow(2,-3))
+print(pow(2,4.5))
+print(pow(3,0))
+
+
+
+
+# open(file, mode)
+
+f = open("myFile.txt", "r")#read mode
+print(f.read())
+
+
+
+# Syntax: map(fun,[Iterable])
+
+numList = (11, 21, 13, 41)
+res = map(lambda x: x + x, numList)
+print(list(res))
+
+
+
+# Syntax: max(iterable) or max(num1,num2…)
+
+num = [11, 13, 12, 15, 14]
+print('Maximum is:', max(num))
+
+
+
+# Syntax: min([iterable])
+
+print(min(2,5,3,1,0,99))
+sampleObj = ['B','a','t','A']
+print(min(sampleObj))
+
+
+
+
+# Syntax: range(start,stop,step)
+
+res = 1
+for i in range(1, 10,2): 
+       res = res * i 
+print("multiplication of first 10 natural number :", res)
+
+# Syntax: reversed([sequence] or [collection])
+tupleObj=(3,4,6,7,9)
+for i in reversed(tupleObj): 
+       print(i,end=' ')
+
+
+```
+printing all python reserved words using   help('keywords')
+
+```py
+
+help('keywords')
+
+```
 ![Help and Dir Built in Functions](../images/help_and_dir_builtin.png)
 
 As you can see from the terminal above, Python has got reserved words. We do not use reserved words to declare variables or functions. We will cover variables in the next section.
 
-I believe, by now you are familiar with built-in functions. Let us do one more practice of built-in functions and we will move on to the next section.
+#### **Example**
 
 ![Min Max Sum](../images/builtin-functional-final.png)
 
 ## Variables
 
-Variables store data in a computer memory. Mnemonic variables are recommended to use in many programming languages. A mnemonic variable is a variable name that can be easily remembered and associated. A variable refers to a memory address in which data is stored.
-Number at the beginning, special character, hyphen are not allowed when naming a variable. A variable can have a short name (like x, y, z), but a more descriptive name (firstname, lastname, age, country) is highly recommended.
+Variables store data in a computer memory.
 
 Python Variable Name Rules
 
 - A variable name must start with a letter or the underscore character
 - A variable name cannot start with a number
-- A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and \_ )
+- A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )
 - Variable names are case-sensitive (firstname, Firstname, FirstName and FIRSTNAME) are different variables)
 
-Let us se valid variable names
+#### **Example**
 
 ```shell
 firstname
@@ -93,11 +337,9 @@ num-1
 1num
 ```
 
-We will use standard Python variable naming style which has been adopted by many Python developers. Python developers use snake case(snake_case) variable naming convention. We use underscore character after each word for a variable containing more than one word(eg. first_name, last_name, engine_rotation_speed).  The example below is an example of standard naming of variables, underscore is required when the variable name is more than one word.
+Taking value to the variable
 
-When we assign a certain data type to a variable, it is called variable declaration. For instance in the example below my first name is assigned to a variable first_name. The equal sign is an assignment operator. Assigning means storing data in the variable. The equal sign in Python is not equality as in Mathematics.
-
-_Example:_
+#### **Example**:
 
 ```py
 # Variables in Python
@@ -116,9 +358,9 @@ person_info = {
    }
 ```
 
-Let us use the _print()_ and _len()_ built-in functions. Print function takes unlimited number of arguments. An argument is a value which we can be passed or put inside the function parenthesis, see the example below.
+Let us use the _print()_ and _len()_ built-in functions. 
 
-**Example:**
+#### **Example:**
 
 ```py
 print('Hello, World!') # The text Hello, World! is an argument
@@ -128,7 +370,7 @@ print(len('Hello, World!')) # it takes only one argument
 
 Let us print and also find the length of the variables declared at the top:
 
-**Example:**
+#### **Example:**
 
 ```py
 # Printing the values stored in the variables
@@ -145,11 +387,9 @@ print('Skills: ', skills)
 print('Person information: ', person_info)
 ```
 
-### Declaring Multiple Variable in a Line
+Declaring Multiple Variable in a Line
 
-Multiple variables can also be declared in one line:
-
-**Example:**
+#### **Example:**
 
 ```py
 first_name, last_name, country, age, is_married = 'Asabeneh', 'Yetayeh', 'Helsink', 250, True
@@ -162,8 +402,9 @@ print('Age: ', age)
 print('Married: ', is_married)
 ```
 
-Getting user input using the _input()_ built-in function. Let us assign the data we get from a user into first_name and age variables.
-**Example:**
+Getting user input using the _input()_ built-in function. 
+
+#### **Example:**
 
 ```py
 first_name = input('What is your name: ')
@@ -175,11 +416,12 @@ print(age)
 
 ## Data Types
 
-There are several data types in Python. To identify the data type we use the _type_ built-in function. I would like to ask you to focus on understanding different data types very well. When it comes to programming, it is all about data types. I introduced data types at the very beginning and it comes again, because every topic is related to data types. We will cover data types in more detail in their respective sections.
+There are several data types in Python. To identify the data type we use the _type_ built-in function. 
 
 ## Checking Data types and Casting
 
 - Check Data types: To check the data type of certain data/variable we use the _type_
+
   **Example:**
 
 ```py
@@ -206,9 +448,8 @@ print(type(zip([1,2],[3,4])))                                   # set
 ```
 
 - Casting: Converting one data type to another data type. We use _int()_, _float()_, _str()_, _list_, _set_
-  When we do arithmetic operations string numbers should be first converted to int or float otherwise it will return an error. If we concatenate a number with a string, the number should be first converted to a string. We will talk about concatenation in String section.
-
-  **Example:**
+   
+**Example:**
 
 ```py
 # int to float
@@ -294,7 +535,3 @@ Number data types in Python:
     3. Take radius as user input and calculate the area.
 1. Use the built-in input function to get first name, last name, country and age from a user and store the value to their corresponding variable names
 1. Run help('keywords') in Python shell or in your file to check for the Python reserved words or keywords
-
-🎉 CONGRATULATIONS ! 🎉
-
-[<< Day 1](../readme.md) | [Day 3 >>](../03_Day_Operators/03_operators.md)
