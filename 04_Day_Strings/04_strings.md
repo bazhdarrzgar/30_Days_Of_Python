@@ -20,7 +20,7 @@
 
 ## Strings
 
-Text is a string data type. Any data type written as text is a string. Any data under single, double or triple quote are strings. There are different string methods and built-in functions to deal with string data types. To check the length of a string use the len() method.
+Text is a string data type. Any data type written as text is a string. Any data under single, double or triple quote are strings.
 
 ### Creating a String
 
@@ -194,7 +194,7 @@ Python strings are sequences of characters, and share their basic methods of acc
 
 #### Unpacking Characters
 
-```
+```py
 language = 'Python'
 a,b,c,d,e,f = language # unpacking sequence characters into variables
 print(a) # P
@@ -316,8 +316,8 @@ print(challenge.find('th')) # 17
 
 ```py
 challenge = 'thirty days of python'
-print(challenge.rfind('y'))  # 5
-print(challenge.rfind('th')) # 1
+print(challenge.rfind('y'))  # 16
+print(challenge.rfind('th')) # 17
 ```
 
 - format(): formats string into a nicer output  
@@ -392,7 +392,7 @@ print(challenge.isdecimal())  # False
 challenge = '123'
 print(challenge.isdecimal())  # True
 challenge = '\u00B2'
-print(challenge.isdigit())   # False
+print(challenge.isdecimal())   # False
 challenge = '12 3'
 print(challenge.isdecimal())  # False, space not allowed
 ```

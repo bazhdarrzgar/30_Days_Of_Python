@@ -279,12 +279,24 @@ print(challenge.expandtabs(10)) # 'thirty    days      of        python'
 
 
 print('========================== find() ==========================')
-# find(): Returns the index of first result of finding occurrence of substring in the string
+# find(): Returns the index of first result of finding occurrence of substring in the string but start in the start to the end of the line, if not find the result return -1
 # if you want search in the entir substring you should use regular expression with flag to search in the entire substring
 
 challenge = 'thirty days of python'
 print(challenge.find('y'))  # 5 # we find it in index 5
 print(challenge.find('th')) # 0 # we find it in index 0
+
+
+
+
+
+print('========================== rfind() ==========================')
+# rfind(): Returns the index of first result of finding occurrence of substring in the string but start in from end to the start of the line, if not found returns -1
+challenge = 'thirty days of python'
+print(challenge.rfind('y'))  # 16
+print(challenge.rfind('th')) # 17
+
+
 
 
 
@@ -324,14 +336,28 @@ print(result) # The area of circle with 10 is 31.4
 
 
 print('========================== index() ==========================')
+# index(): Returns the index of first result of substring in the string but search will be in the start to the end of the line
 
-# index(): Returns the index of first result of substring in the string
 challenge = 'thirty days of python'
 print(challenge.find('y'))  # 5 # using find() function
 print(challenge.find('th')) # 0 # using find() function
 
 print(challenge.index('y'))  # 5 # using index() function
 print(challenge.index('th')) # 0 # using index() function
+
+
+
+
+
+print('========================== rindex() ==========================')
+# index(): Returns the index of first result of substring in the string but search will be in the end to the end of the start
+
+challenge = 'thirty days of python'
+sub_string = 'th'
+print(challenge.rindex(sub_string))  # 17
+# print(challenge.rindex(sub_string, 9)) # error # means if my substring is actually in index 9 or not if not then return error if in this index then return True
+
+
 
 
 
@@ -376,6 +402,9 @@ num = '10 '
 print(num.isdecimal()) # False
 num = '10.5'
 print(num.isdecimal()) # False
+challenge = '\u00B2' # ½ # it is not actuall decimal :) means clean decimal number
+print(challenge.isdecimal())   # False
+
 
 
 
@@ -390,6 +419,8 @@ challenge = 'Thirty'
 print(challenge.isdigit()) # False
 challenge = '30:)'
 print(challenge.isdigit())   # True
+challenge = '\u00B2' # ½ 
+print(challenge.isdecimal())   # True
 
 
 
@@ -444,6 +475,8 @@ print(num.isnumeric())      # True
 print('ten'.isnumeric())    # False
 print('10:0'.isnumeric())    # False
 print('10.0'.isnumeric())    # False
+num = '\u00BD' # ½
+print(num.isnumeric()) # True
 
 
 
@@ -467,8 +500,10 @@ print(challenge) #  thirty days of python # with space before the string
 print(challenge.strip()) # thirty days of python # without space before the string 
 print(challenge.strip('of')) #  thirty days of python # they don't work because   strip()  is search from first index (0) if not find then get out, if you want search in the entire string you should use regular expression with it
 print(challenge.strip(' thirty')) # days of python # this is work because   strip()   in this time is find the match from first index (0) and second and ... 
-
-
+challenge = 'thirty days of pythoonnn'
+print(challenge.strip('noth')) # irty days of py   # not find   ( no ) but it find  ( th )  :| wow python is actuall very smart like human 
+challenge = 'thirty days of pythoonnn'
+print(challenge.strip('onth')) # irty days of py # this time is find ( on ) and ( th )
 
 
 print('========================== replace() ==========================')
@@ -546,3 +581,72 @@ challenge = 'thirty days of python'
 print(challenge.endswith('python')) # True
 challenge = '30 days of python'
 print(challenge.endswith('javascript')) # False
+
+
+
+
+print('========================== String formatting ==========================')
+'''
+%s - String (or any object with a string representation, like numbers) just something inside doubel or single quotes
+%d - Integers
+%f - Floating point numbers
+%.number of digitsf  -  Floating point numbers with fixed precision
+
+'''
+
+# Strings only
+first_name = 'Asabeneh'
+last_name = 'Yetayeh'
+language = 'Python'
+formated_string = 'I am %s %s. I teach %s' %(first_name, last_name, language)
+print(formated_string)
+
+# Strings  and numbers
+radius = 10
+pi = 3.14
+area = pi * radius ** 2
+#   %.2f   the  .2   means round 2 or number after dot should be 2 digit
+formated_string = 'The area of circle with a radius %d is %.2f.' %(radius, area) # 2 refers the 2 significant digits after the point
+print(formated_string) ## The area of circle with a radius 10 is 314.00.
+python_libraries = ['Django', 'Flask', 'NumPy', 'Matplotlib','Pandas']
+formated_string = 'The following are python libraries:%s' %(python_libraries)
+print(formated_string) # "The following are python libraries:['Django', 'Flask', 'NumPy', 'Matplotlib','Pandas']"
+
+
+
+
+
+print('========================== String Interpolation / f-Strings (Python 3.6+) ==========================')
+'''
+# Syntax
+
+f'stirng....{variable_name}....{variable_name}.......'
+f'stirng....{variable_name}....{variable_name:.2f}.......' # :.2f the   :.2   we are using for round 2 or specify number of point after dot (.) 
+'''
+
+a = 4
+b = 3
+print(f'{a} + {b} = {a +b}')
+print(f'{a} - {b} = {a - b}')
+print(f'{a} * {b} = {a * b}')
+print(f'{a} / {b} = {a / b:.2f}')
+print(f'{a} % {b} = {a % b}')
+print(f'{a} // {b} = {a // b}')
+print(f'{a} ** {b} = {a ** b}')
+
+
+
+
+print('========================== Reversing a String ==========================')
+##   [::-1]   means reverse the order
+'''
+# Syntax
+
+variable_name = 'string'
+variable_name[::-1]
+'''
+
+greeting = 'Hello, World!'
+print(greeting[::-1]) # !dlroW ,olleH
+
+
