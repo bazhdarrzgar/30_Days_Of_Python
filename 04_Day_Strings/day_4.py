@@ -266,8 +266,9 @@ print(challenge.endswith('tion')) # False
 print('========================== expandtabs() ==========================')
 # expandtabs(): Replaces tab character with spaces, default tab size is 8. It takes tab size argument
 # \t   tab size is 8
+# expandtabs()  tab size is 8 by deafult
 
-# if you want use     expandtabs()    you should use    \t    to work this function 
+# if you want use     expandtabs()    you should use    \t    to work your function   expandtabs() 
 challenge = 'thirty\tdays\tof\tpython'
 print(challenge.expandtabs())   # 'thirty  days    of      python'
 print(challenge.expandtabs(10)) # 'thirty    days      of        python'
@@ -277,138 +278,271 @@ print(challenge.expandtabs(10)) # 'thirty    days      of        python'
 
 
 
-# # find(): Returns the index of first occurrence of substring
+print('========================== find() ==========================')
+# find(): Returns the index of first result of finding occurrence of substring in the string
+# if you want search in the entir substring you should use regular expression with flag to search in the entire substring
 
-# challenge = 'thirty days of python'
-# print(challenge.find('y'))  # 5
-# print(challenge.find('th')) # 0
-
-# # format()	formats string into nicer output    
-# first_name = 'Asabeneh'
-# last_name = 'Yetayeh'
-# job = 'teacher'
-# country = 'Finland'
-# sentence = 'I am {} {}. I am a {}. I live in {}.'.format(first_name, last_name, job, country)
-# print(sentence) # I am Asabeneh Yetayeh. I am a teacher. I live in Finland.
-
-# radius = 10
-# pi = 3.14
-# area = pi # radius ## 2
-# result = 'The area of circle with {} is {}'.format(str(radius), str(area))
-# print(result) # The area of circle with 10 is 314.0
-
-# # index(): Returns the index of substring
-# challenge = 'thirty days of python'
-# print(challenge.find('y'))  # 5
-# print(challenge.find('th')) # 0
-
-# # isalnum(): Checks alphanumeric character
-
-# challenge = 'ThirtyDaysPython'
-# print(challenge.isalnum()) # True
-
-# challenge = '30DaysPython'
-# print(challenge.isalnum()) # True
-
-# challenge = 'thirty days of python'
-# print(challenge.isalnum()) # False
-
-# challenge = 'thirty days of python 2019'
-# print(challenge.isalnum()) # False
-
-# # isalpha(): Checks if all characters are alphabets
-
-# challenge = 'thirty days of python'
-# print(challenge.isalpha()) # True
-# num = '123'
-# print(num.isalpha())      # False
-
-# # isdecimal(): Checks Decimal Characters
-
-# challenge = 'thirty days of python'
-# print(challenge.find('y'))  # 5
-# print(challenge.find('th')) # 0
-
-# # isdigit(): Checks Digit Characters
-
-# challenge = 'Thirty'
-# print(challenge.isdigit()) # False
-# challenge = '30'
-# print(challenge.digit())   # True
-
-# # isdecimal():Checks decimal characters
-
-# num = '10'
-# print(num.isdecimal()) # True
-# num = '10.5'
-# print(num.isdecimal()) # False
+challenge = 'thirty days of python'
+print(challenge.find('y'))  # 5 # we find it in index 5
+print(challenge.find('th')) # 0 # we find it in index 0
 
 
-# # isidentifier():Checks for valid identifier means it check if a string is a valid variable name
 
-# challenge = '30DaysOfPython'
-# print(challenge.isidentifier()) # False, because it starts with a number
-# challenge = 'thirty_days_of_python'
-# print(challenge.isidentifier()) # True
+print('========================== format() ==========================')
+# format()	formats string into nicer output or putting value of variable in the string 
+'''
+# Syntax
+
+variable_name_1 = value1
+variable_name_2 = value2
+variable_name_3 = value3
+variable_name_... = ...
+
+variable_name4 = 'hello i am {}, i am from {}, i am right now in {}'.format(variable_name_1, variable_name_2, variable_name_3, ...)
+
+print(variable_name_4) # hello i am value1, i am from value2, i am right now in value3
+'''  
+
+first_name = 'Asabeneh'
+last_name = 'Yetayeh'
+job = 'teacher'
+country = 'Finland'
+sentence = 'I am {} {}. I am a {}. I live in {}.'.format(first_name, last_name, job, country) # putting the value of this variable to the independed place in the string for this bracket     {}   depended to the index number or order of the variable
+# sentence = f'I am {first_name} {last_name}. I am a {job}. I live in {country}.'
+print(sentence) # I am Asabeneh Yetayeh. I am a teacher. I live in Finland.
 
 
-# # islower():Checks if all alphabets in a string are lowercase
-
-# challenge = 'thirty days of python'
-# print(challenge.islower()) # True
-# challenge = 'Thirty days of python'
-# print(challenge.islower()) # False
-
-# # isupper(): returns if all characters are uppercase characters
-
-# challenge = 'thirty days of python'
-# print(challenge.isupper()) #  False
-# challenge = 'THIRTY DAYS OF PYTHON'
-# print(challenge.isupper()) # True
+# changing number to string using     str()    function
+radius = 10
+pi = 3.14
+area = pi * radius # radius ## 2
+result = 'The area of circle with {} is {}'.format(str(radius), str(round(area, 1)))
+print(result) # The area of circle with 10 is 31.4
 
 
-# # isnumeric():Checks numeric characters
 
-# num = '10'
-# print(num.isnumeric())      # True
-# print('ten'.isnumeric())    # False
 
-# # join(): Returns a concatenated string
 
-# web_tech = ['HTML', 'CSS', 'JavaScript', 'React']
-# result = '#, '.join(web_tech)
-# print(result) # 'HTML# CSS# JavaScript# React'
+print('========================== index() ==========================')
 
-# # strip(): Removes both leading and trailing characters
+# index(): Returns the index of first result of substring in the string
+challenge = 'thirty days of python'
+print(challenge.find('y'))  # 5 # using find() function
+print(challenge.find('th')) # 0 # using find() function
 
-# challenge = ' thirty days of python '
-# print(challenge.strip('y')) # 5
+print(challenge.index('y'))  # 5 # using index() function
+print(challenge.index('th')) # 0 # using index() function
 
-# # replace(): Replaces substring inside
 
-# challenge = 'thirty days of python'
-# print(challenge.replace('python', 'coding')) # 'thirty days of coding'
 
-# # split():Splits String from Left
+print('========================== isalnum() ==========================')
+# isalnum(): Checks alphanumeric character means if all the index in the list is alphanumric in the english character also number but not symbol and .....
 
-# challenge = 'thirty days of python'
-# print(challenge.split()) # ['thirty', 'days', 'of', 'python']
+challenge = 'ThirtyDaysPython'
+print(challenge.isalnum()) # True
 
-# # title(): Returns a Title Cased String
+challenge = '30DaysPython'
+print(challenge.isalnum()) # True
 
-# challenge = 'thirty days of python'
-# print(challenge.title()) # Thirty Days Of Python
+challenge = 'thirty days of python'
+print(challenge.isalnum()) # False # because we have space
 
-# # swapcase(): Checks if String Starts with the Specified String
+challenge = 'thirtydaysofpython2019' # number is in the list
+print(challenge.isalnum()) # False
+
+
+
+
+
+print('========================== isalpha() ==========================')
+# isalpha(): Checks if all characters are alphabets it is accept all the character in english also space but not symbol and number and ....
+
+challenge = 'thirtydaysofpython'
+print(challenge.isalpha()) # True
+challenge = 'thirty days of python'
+print(challenge.isalpha()) # False
+num = '123'
+print(num.isalpha())      # False
+
+
+
+
+print('========================== isdecimal() ==========================')
+# isdecimal(): Checks if all character is Decimal Characters this is not accept the space and symbol and character english and ...
+
+num = '10'
+print(num.isdecimal()) # True
+num = '10 '
+print(num.isdecimal()) # False
+num = '10.5'
+print(num.isdecimal()) # False
+
+
+
+
+print('========================== isdigit() ==========================')
+# isdigit(): Checks Digit Characters, means just number not space and not character english and not symbol and ..
+# isdigit()  =   isdecimal()
+
+challenge = '30'
+print(challenge.isdigit())   # True
+challenge = 'Thirty'
+print(challenge.isdigit()) # False
+challenge = '30:)'
+print(challenge.isdigit())   # True
+
+
+
+
+
+print('========================== isidentifier() ==========================')
+# isidentifier(): Checks for valid identifier, is not accept number and symbol or space or .. just (string) or (string with underscore)
+
+challenge = '30DaysOfPython'
+print(challenge.isidentifier()) # False, because it starts with a number
+challenge = 'thirty_days_of_python'
+print(challenge.isidentifier()) # True
+challenge = 'thirty_days_of_python_:)'
+print(challenge.isidentifier()) # False
+challenge = 'thirty days of python_:)'
+print(challenge.isidentifier()) # False
+
+
+
+
+print('========================== islower() ==========================')
+# islower(): Checks if all alphabets in a string are lowercase
+
+challenge = 'THIRTY DAYS OF PYTHON'
+print(challenge.islower()) # False
+challenge = 'thirty days of python'
+print(challenge.islower()) # True
+challenge = 'Thirty days of python'
+print(challenge.islower()) # False
+
+
+
+print('========================== isupper() ==========================')
+# islower(): Checks if all alphabets in a string are uppercase
+
+challenge = 'THIRTY DAYS OF PYTHON'
+print(challenge.isupper()) # True
+challenge = 'thirty days of python'
+print(challenge.isupper()) # False
+challenge = 'Thirty days of python'
+print(challenge.isupper()) # False
+
+
+
+
+
+print('========================== isupper() ==========================')
+# isnumeric(): Checks numeric characters, just number accept not space or point or anything just fucking number
+
+num = '10'
+print(num.isnumeric())      # True
+print('ten'.isnumeric())    # False
+print('10:0'.isnumeric())    # False
+print('10.0'.isnumeric())    # False
+
+
+
+
+print('========================== join() ==========================')
+# join(): Returns a concatenated string
+
+web_tech = ['HTML', 'CSS', 'JavaScript', 'React']
+# this will joing all the list
+# also because join is work like for loop means concate the list value one by one, means not all this value join it in one time, because of that you can use string before   join()   function to beutify your work
+result = '#, '.join(web_tech) 
+print(result) # HTML#, CSS#, JavaScript#, React
+
+
+
+print('========================== strip() ==========================')
+# strip(): Removes both leading and trailing characters
+
+challenge = ' thirty days of python '
+print(challenge) #  thirty days of python # with space before the string
+print(challenge.strip()) # thirty days of python # without space before the string 
+print(challenge.strip('of')) #  thirty days of python # they don't work because   strip()  is search from first index (0) if not find then get out, if you want search in the entire string you should use regular expression with it
+print(challenge.strip(' thirty')) # days of python # this is work because   strip()   in this time is find the match from first index (0) and second and ... 
+
+
+
+
+print('========================== replace() ==========================')
+# replace(): Replaces substring inside string this is true for the entire string means return all this value that replace by   replace()   function
+'''
+# Syntax
+
+variable_name = 'string is string'
+variable_name.replace('find something', 'replace with something')
+
+'''
+
+challenge = 'thirty days of python and python'
+print(challenge.replace('python', 'coding')) # thirty days of coding and coding
+print(challenge.replace('thi', 'fou')) # fourty days of python and python
+
+
+
+
+
+# print('========================== split() ==========================')
+# split(): Splits String from Left, work base on space by default
+
+challenge = 'thirty days of python'
+print(challenge.split()) # ['thirty', 'days', 'of', 'python']
+
+challenge = 'thirty,days,of,python'
+print(challenge.split(',')) # ['thirty', 'days', 'of', 'python']
+
+challenge = 'thirty, days, of, python'
+print(challenge.split(', ')) # ['thirty', 'days', 'of', 'python']
+
+
+
+
+
+print('========================== title() ==========================')
+# title(): Returns a Title Cased String, change all the first character word to capital in the entire statement or line
+# capitilize()  !=   title()
+# capitilize() function just capital the first character in this word that come first in the statement or line
+
+challenge = 'thirty days of python'
+print(challenge.title()) # Thirty Days Of Python
+print(challenge.capitalize()) # Thirty days of python
+
+
+
+
+print('========================== swapcase() ==========================')
+# swapcase(): swapcase means swap the cases this is Checks if String Starts with the Specified String, just change capital to small and small to capital
   
-# challenge = 'thirty days of python'
-# print(challenge.swapcase())   # THIRTY DAYS OF PYTHON
-# challenge = 'Thirty Days Of Python'
-# print(challenge.swapcase())  # tHIRTY dAYS oF pYTHON
+challenge = 'thirty days of python'
+print(challenge.swapcase())   # THIRTY DAYS OF PYTHON
+challenge = 'Thirty Days Of Python'
+print(challenge.swapcase())  # tHIRTY dAYS oF pYTHON
 
-# # startswith(): Checks if String Starts with the Specified String
 
-# challenge = 'thirty days of python'
-# print(challenge.startswith('thirty')) # True
-# challenge = '30 days of python'
-# print(challenge.startswith('thirty')) # False
+
+
+
+print('========================== startswith() ==========================')
+# startswith(): Checks if String Starts with the Specified String, return True or False for the answear
+
+challenge = 'thirty days of python'
+print(challenge.startswith('thirty')) # True
+challenge = '30 days of python'
+print(challenge.startswith('thirty')) # False
+
+
+
+print('========================== endswith() ==========================')
+# startswith(): Checks if String Ends with the Specified String, return True or False for the answear
+
+challenge = 'thirty days of python'
+print(challenge.endswith('python')) # True
+challenge = '30 days of python'
+print(challenge.endswith('javascript')) # False
