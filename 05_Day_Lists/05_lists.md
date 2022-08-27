@@ -1,25 +1,6 @@
-<div align="center">
-  <h1> 30 Days Of Python: Day 5 - Lists</h1>
-  <a class="header-badge" target="_blank" href="https://www.linkedin.com/in/asabeneh/">
-  <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
-  </a>
-  <a class="header-badge" target="_blank" href="https://twitter.com/Asabeneh">
-  <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/asabeneh?style=social">
-  </a>
-
-<sub>Author:
-<a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-<small> Second Edition: July - 2021</small>
-</sub>
-
-</div>
-
-[<< Day 4](../04_Day_Strings/04_strings.md) | [Day 6 >>](../06_Day_Tuples/06_tuples.md)
-
-![30DaysOfPython](../images/30DaysOfPython_banner3@2x.png)
-
 - [Day 5](#day-5)
   - [Lists](#lists)
+  - [|category   |   ordered |   changeble(modifiable) | dupplicate value |  indexed |](#category------ordered----changeblemodifiable--dupplicate-value---indexed-)
     - [How to Create a List](#how-to-create-a-list)
     - [Accessing List Items Using Positive Indexing](#accessing-list-items-using-positive-indexing)
     - [Accessing List Items Using Negative Indexing](#accessing-list-items-using-negative-indexing)
@@ -49,16 +30,36 @@
 
 There are four collection data types in Python :
 
-- List: is a collection which is ordered and changeable(modifiable). Allows duplicate members.
-- Tuple: is a collection which is ordered and unchangeable or unmodifiable(immutable). Allows duplicate members.
-- Set: is a collection which is unordered, un-indexed and unmodifiable, but we can add new items to the set. Duplicate members are not allowed.
-- Dictionary: is a collection which is unordered, changeable(modifiable) and indexed. No duplicate members.
+- List: is a collection which is **ordered** and **changeable(modifiable)**. **Allows duplicate members**.
+- Tuple: is a collection which is **ordered** and **unchangeable or unmodifiable(immutable)**. **Allows duplicate members**.
+- Set: is a collection which is **unordered**, **un-indexed** and **unmodifiable**, but we can **add new items** to the set. **Duplicate members are not allowed**.
+- Dictionary: is a collection which is **unordered**, **changeable(modifiable)** and **indexed**. No **duplicate members**.
 
-A list is collection of different data types which is ordered and modifiable(mutable). A list can be empty or it may have different data type items.
+|category   |   ordered |   changeble(modifiable) | dupplicate value |  indexed |
+---------------------------------------------------------------------------------
+|ls|l|l|l|l|
+
+| category |        ordered|  changeble or modifiable  | duplicate value  | indexed  | add|
+|----------|:-------------:|--------------------------:|-----------------:|---------:|---:|
+| list     |  yes          |   yes                     |   yes            |    yes   |yes |
+| tuple    |  yes          |   no                      |   yes            |    yes   |yes |
+| set      |  no           |   no                      |   no             |    no    |yes |
+| dict     |  no           |   yes                     |   yes            |    yes   |yes |
+
+
+---------------------------------
+
+* list: A list is collection of different data types which is ordered and modifiable(mutable). A list can be empty or it may have different data type items.
 
 ### How to Create a List
 
 In Python we can create lists in two ways:
+
+1. using     **list( )**     build it function
+
+2. using this bracket   **[ ]**   build it function
+
+---------------------------------
 
 - Using list built-in function
 
@@ -582,7 +583,3 @@ ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
 1. Find the middle country(ies) in the [countries list](https://github.com/Asabeneh/30-Days-Of-Python/tree/master/data/countries.py)
 1. Divide the countries list into two equal lists if it is even if not one more country for the first half.
 1. ['China', 'Russia', 'USA', 'Finland', 'Sweden', 'Norway', 'Denmark']. Unpack the first three countries and the rest as scandic countries.
-
-🎉 CONGRATULATIONS ! 🎉
-
-[<< Day 4](../04_Day_Strings/04_strings.md) | [Day 6 >>](../06_Day_Tuples/06_tuples.md)
