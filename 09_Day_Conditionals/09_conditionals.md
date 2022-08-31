@@ -1,23 +1,3 @@
-<div align="center">
-  <h1> 30 Days Of Python: Day 9 - Conditionals</h1>
-  <a class="header-badge" target="_blank" href="https://www.linkedin.com/in/asabeneh/">
-  <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
-  </a>
-  <a class="header-badge" target="_blank" href="https://twitter.com/Asabeneh">
-  <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/asabeneh?style=social">
-  </a>
-
-<sub>Author:
-<a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-<small> Second Edition: July, 2021</small>
-</sub>
-
-</div>
-
-[<< Day 8](../08_Day_Dictionaries/08_dictionaries.md) | [Day 10 >>](../10_Day_Loops/10_loops.md)
-
-![30DaysOfPython](../images/30DaysOfPython_banner3@2x.png)
-
 - [📘 Day 9](#-day-9)
   - [Conditionals](#conditionals)
     - [If Condition](#if-condition)
@@ -34,14 +14,12 @@
 
 ## Conditionals
 
-By default, statements in Python script are executed sequentially from top to bottom. If the processing logic require so, the sequential flow of execution can be altered in two way:
+**By default**, statements in Python script are **executed sequentially from top to bottom**. 
 
-- Conditional execution: a block of one or more statements will be executed if a certain expression is true
-- Repetitive execution: a block of one or more statements will be repetitively executed as long as a certain expression is true. In this section, we will cover _if_, _else_, _elif_ statements. The comparison and logical operators we learned in previous sections will be useful here.
 
 ### If Condition
 
-In python and other programming languages the key word _if_ is used to check if a condition is true and to execute the block code. Remember the indentation after the colon.
+In python and other programming languages the key word **_if_** is used to check if a condition is true and to execute the block code. Remember the indentation after the colon.
 
 ```py
 # syntax
@@ -58,8 +36,6 @@ if a > 0:
 # A is a positive number
 ```
 
-As you can see in the example above, 3 is greater than 0. The condition was true and the block code was executed. However, if the condition is false, we do not see the result. In order to see the result of the falsy condition, we should have another block, which is going to be _else_.
-
 ### If Else
 
 If condition is true the first block will be executed, if not the else condition will run.
@@ -72,7 +48,7 @@ else:
      this part of code runs for false conditions
 ```
 
-**Example: **
+**Example:**
 
 ```py
 a = 3
@@ -82,11 +58,9 @@ else:
     print('A is a positive number')
 ```
 
-The condition above proves false, therefore the else block was executed. How about if our condition is more than two? We could use _ elif_.
-
 ### If Elif Else
 
-In our daily life, we make decisions on daily basis. We make decisions not by checking one or two conditions but multiple conditions. As similar to life, programming is also full of conditions. We use _elif_ when we have multiple conditions.
+In our daily life, we make decisions on daily basis. We make decisions not by checking one or two conditions but multiple conditions. As similar to life, programming is also full of conditions. We use **_elif_** when we have multiple conditions.
 
 ```py
 # syntax
@@ -99,7 +73,7 @@ else:
 
 ```
 
-**Example: **
+**Example:**
 
 ```py
 a = 0
@@ -118,7 +92,7 @@ else:
 code if condition else code
 ```
 
-**Example: **
+**Example:**
 
 ```py
 a = 3
@@ -134,10 +108,10 @@ Conditions can be nested
 if condition:
     code
     if condition:
-    code
+        code
 ```
 
-**Example: **
+**Example:**
 
 ```py
 a = 0
@@ -153,8 +127,6 @@ else:
 
 ```
 
-We can avoid writing nested condition by using logical operator _and_.
-
 ### If Condition and Logical Operators
 
 ```py
@@ -163,7 +135,7 @@ if condition and condition:
     code
 ```
 
-**Example: **
+**Example:**
 
 ```py
 a = 0
@@ -272,7 +244,3 @@ Enter number two: 3
 ```py
     Asabeneh Yetayeh lives in Finland. He is married.
 ```
-
-🎉 CONGRATULATIONS ! 🎉
-
-[<< Day 8](../08_Day_Dictionaries/08_dictionaries.md) | [Day 10 >>](../10_Day_Loops/10_loops.md)
