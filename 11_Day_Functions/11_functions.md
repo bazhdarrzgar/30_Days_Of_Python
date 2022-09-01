@@ -1,23 +1,3 @@
-<div align="center">
-  <h1> 30 Days Of Python: Day 11 - Functions</h1>
-  <a class="header-badge" target="_blank" href="https://www.linkedin.com/in/asabeneh/">
-  <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
-  </a>
-  <a class="header-badge" target="_blank" href="https://twitter.com/Asabeneh">
-  <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/asabeneh?style=social">
-  </a>
-
-<sub>Author:
-<a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-<small> Second Edition: July, 2021</small>
-</sub>
-
-</div>
-
-[<< Day 10](../10_Day_Loops/10_loops.md) | [Day 12 >>](../12_Day_Modules/12_modules.md)
-
-![30DaysOfPython](../images/30DaysOfPython_banner3@2x.png)
-
 - [📘 Day 11](#-day-11)
   - [Functions](#functions)
     - [Defining a Function](#defining-a-function)
@@ -31,6 +11,7 @@
     - [Arbitrary Number of Arguments](#arbitrary-number-of-arguments)
     - [Default and Arbitrary Number of Parameters in Functions](#default-and-arbitrary-number-of-parameters-in-functions)
     - [Function as a Parameter of Another Function](#function-as-a-parameter-of-another-function)
+  - [Testimony](#testimony)
   - [💻 Exercises: Day 11](#-exercises-day-11)
     - [Exercises: Level 1](#exercises-level-1)
     - [Exercises: Level 2](#exercises-level-2)
@@ -451,7 +432,3 @@ print(sum_all_numbers(100)) # 5050
 
 - Create a function called the most_spoken_languages in the world. It should return 10 or 20 most spoken languages in the world in descending order
 - Create a function called the most_populated_countries. It should return 10 or 20 most populated countries in descending order.
-
-🎉 CONGRATULATIONS ! 🎉
-
-[<< Day 10](../10_Day_Loops/10_loops.md) | [Day 12 >>](../12_Day_Modules/12_modules.md)
