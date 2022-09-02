@@ -1,24 +1,3 @@
-<div align="center">
-  <h1> 30 Days Of Python: Day 12 - Modules </h1>
-  <a class="header-badge" target="_blank" href="https://www.linkedin.com/in/asabeneh/">
-  <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
-  </a>
-  <a class="header-badge" target="_blank" href="https://twitter.com/Asabeneh">
-  <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/asabeneh?style=social">
-  </a>
-
-<sub>Author:
-<a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-<small> Second Edition: July, 2021</small>
-</sub>
-
-</div>
-</div>
-
-[<< Day 11](../11_Day_Functions/11_functions.md) | [Day 13>>](../13_Day_List_comprehension/13_list_comprehension.md)
-
-![30DaysOfPython](../images/30DaysOfPython_banner3@2x.png)
-
 - [📘 Day 12](#-day-12)
   - [Modules](#modules)
     - [What is a Module](#what-is-a-module)
@@ -44,19 +23,13 @@
 
 ### What is a Module
 
-A module is a file containing a set of codes or a set of functions which can be included to an application. A module could be a file containing a single variable, a function or a big code base.
-
 ### Creating a Module
-
-To create a module we write our codes in a python script and we save it as a .py file. Create a file named mymodule.py inside your project folder. Let us write some code in this file.
 
 ```py
 # mymodule.py file
 def generate_full_name(firstname, lastname):
     return firstname + ' ' + lastname
 ```
-
-Create main.py file in your project directory and import the mymodule.py file.
 
 ### Importing a Module
 
@@ -70,8 +43,6 @@ print(mymodule.generate_full_name('Asabeneh', 'Yetayeh')) # Asabeneh Yetayeh
 
 ### Import Functions from a Module
 
-We can have many functions in a file and we can import all the functions differently.
-
 ```py
 # main.py file
 from mymodule import generate_full_name, sum_two_nums, person, gravity
@@ -84,8 +55,6 @@ print(person['firstname'])
 ```
 
 ### Import Functions from a Module and Renaming
-
-During importing we can rename the name of the module.
 
 ```py
 # main.py file
@@ -105,8 +74,6 @@ Like other programming languages we can also import modules by importing the fil
 
 ### OS Module
 
-Using python _os_ module it is possible to automatically perform many operating system tasks. The OS module in Python provides functions for creating, changing current working directory, and removing a directory (folder), fetching its contents, changing and identifying the current directory.
-
 ```py
 # import the module
 import os
@@ -121,10 +88,6 @@ os.rmdir()
 ```
 
 ### Sys Module
-
-The sys module provides functions and variables used to manipulate different parts of the Python runtime environment. Function sys.argv returns a list of command line arguments passed to a Python script. The item at index 0 in this list is always the name of the script, at index 1 is the argument passed from the command line.
-
-Example of a script.py file:
 
 ```py
 import sys
@@ -172,8 +135,6 @@ print(stdev(ages))      # ~2.3
 
 ### Math Module
 
-Module containing many mathematical operations and constants.
-
 ```py
 import math
 print(math.pi)           # 3.141592653589793, pi constant
@@ -184,14 +145,10 @@ print(math.ceil(9.81))   # 10, rounding to the highest
 print(math.log10(100))   # 2, logarithm with 10 as base
 ```
 
-Now, we have imported the *math* module which contains lots of function which can help us to perform mathematical calculations. To check what functions the module has got, we can use _help(math)_, or _dir(math)_. This will display the available functions in the module. If we want to import only a specific function from the module we import it as follows:
-
 ```py
 from math import pi
 print(pi)
 ```
-
-It is also possible to import multiple functions at once
 
 ```py
 
@@ -205,8 +162,6 @@ print(math.log10(100))    # 2
 
 ```
 
-But if we want to import all the function in math module we can use \* .
-
 ```py
 from math import *
 print(pi)                  # 3.141592653589793, pi constant
@@ -217,16 +172,12 @@ print(ceil(9.81))          # 10, rounding to the highest
 print(math.log10(100))     # 2
 ```
 
-When we import we can also rename the name of the function.
-
 ```py
 from math import pi as  PI
 print(PI) # 3.141592653589793
 ```
 
 ### String Module
-
-A string module is a useful module for many purposes. The example below shows some use of the string module.
 
 ```py
 import string
@@ -236,8 +187,6 @@ print(string.punctuation)   # !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
 ```
 
 ### Random Module
-
-By now you are familiar with importing modules. Let us do one more import to get very familiar with it. Let us import _random_ module which gives us a random number between 0 and 0.9999.... The _random_ module has lots of functions but in this section we will only use _random_ and _randint_.
 
 ```py
 from random import random, randint
@@ -299,7 +248,3 @@ print(rgb_color_gen())
 
 1. Call your function shuffle_list, it takes a list as a parameter and it returns a shuffled list
 1. Write a function which returns an array of seven random numbers in a range of 0-9. All the numbers must be unique.
-
-🎉 CONGRATULATIONS ! 🎉
-
-[<< Day 11](../11_Day_Functions/11_functions.md) | [Day 13>>](../13_Day_List_comprehension/13_list_comprehension.md)
