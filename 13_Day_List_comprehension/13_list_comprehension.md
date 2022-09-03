@@ -9,16 +9,12 @@
 
 ## List Comprehension
 
-List comprehension in Python is a compact way of creating a list from a sequence. It is a short way to create a new list. List comprehension is considerably faster than processing a list using the _for_ loop.
-
 ```py
 # syntax
 [i for i in iterable if expression]
 ```
 
 **Example:1**
-
-For instance if you want to change a string to a list of characters. You can use a couple of methods. Let's see some of them:
 
 ```py
 # One way
@@ -36,8 +32,6 @@ print(lst)       # ['P', 'y', 't', 'h', 'o', 'n']
 
 **Example:2**
 
-For instance if you want to generate a list of numbers
-
 ```py
 # Generating numbers
 numbers = [i for i in range(11)]  # to generate numbers from 0 to 10
@@ -54,9 +48,6 @@ print(numbers)                             # [(0, 0), (1, 1), (2, 4), (3, 9), (4
 ```
 
 **Example:2**
-
-List comprehension can be combined with if expression
-
 
 ```py
 # Generating even numbers
@@ -79,11 +70,7 @@ print(flattened_list)    # [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 ## Lambda Function
 
-Lambda function is a small anonymous function without a name. It can take any number of arguments, but can only have one expression. Lambda function is similar to anonymous functions in JavaScript. We need it when we want to write an anonymous function inside another function.
-
 ### Creating a Lambda Function
-
-To create a lambda function we use _lambda_ keyword followed by a parameter(s), followed by an expression. See the syntax and the example below. Lambda function does not use return but it explicitly returns the expression.
 
 ```py
 # syntax
@@ -117,8 +104,6 @@ print(multiple_variable(5, 5, 3)) # 22
 ```
 
 ### Lambda Function Inside Another Function
-
-Using a lambda function inside another function.
 
 ```py
 def power(x):
