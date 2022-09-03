@@ -27,11 +27,6 @@ In Python functions are treated as first class citizens, allowing you to perform
 - A function can be modified
 - A function can be assigned to a variable
 
-In this section, we will cover:
-
-1. Handling functions as parameters
-2. Returning functions as return value from another functions
-3. Using Python closures and decorators
 
 ### Function as a Parameter
 
@@ -77,11 +72,7 @@ result = higher_order_function('absolute')
 print(result(-3))      # 3
 ```
 
-You can see from the above example that the higher order function is returning different functions depending on the passed parameter
-
 ## Python Closures
-
-Python allows a nested function to access the outer scope of the enclosing function. This is is known as a Closure. Let us have a look at how closures work in Python. In Python, closure is created by nesting a function inside another encapsulating function and then returning the inner function. See the example below.
 
 **Example:**
 
@@ -99,11 +90,7 @@ print(closure_result(10))  # 20
 
 ## Python Decorators
 
-A decorator is a design pattern in Python that allows a user to add new functionality to an existing object without modifying its structure. Decorators are usually called before the definition of a function you want to decorate.
-
 ### Creating Decorators
-
-To create a decorator function, we need an outer function with an inner wrapper function.
 
 **Example:**
 
@@ -141,9 +128,6 @@ print(greeting())   # WELCOME TO PYTHON
 
 ```py
 
-'''These decorator functions are higher order functions
-that take functions as parameters'''
-
 # First Decorator
 def uppercase_decorator(function):
     def wrapper():
@@ -170,8 +154,6 @@ print(greeting())   # WELCOME TO PYTHON
 
 ### Accepting Parameters in Decorator Functions
 
-Most of the time we need our functions to take parameters, so we might need to define a decorator that accepts parameters.
-
 ```py
 def decorator_with_parameters(function):
     def wrapper_accepting_parameters(para1, para2, para3):
@@ -189,12 +171,7 @@ print_full_name("Asabeneh", "Yetayeh",'Finland')
 
 ## Built-in Higher Order Functions
 
-Some of the built-in higher order functions that we cover in this part are _map()_, _filter_, and _reduce_.
-Lambda function can be passed as a parameter and the best use case of lambda functions is in functions like map, filter and reduce.
-
 ### Python - Map Function
-
-The map() function is a built-in function that takes a function and iterable as parameters.
 
 ```py
     # syntax
@@ -238,11 +215,7 @@ names_upper_cased = map(lambda name: name.upper(), names)
 print(list(names_upper_cased))    # ['ASABENEH', 'LIDIYA', 'ERMIAS', 'ABRAHAM']
 ```
 
-What actually map does is iterating over a list. For instance, it changes the names to upper case and returns a new list.
-
 ### Python - Filter Function
-
-The filter() function calls the specified function which returns boolean for each item of the specified iterable (list). It filters the items that satisfy the filtering criteria.
 
 ```py
     # syntax
@@ -292,10 +265,12 @@ print(list(long_names))         # ['Asabeneh']
 
 ### Python - Reduce Function
 
-The _reduce()_ function is defined in the functools module and we should import it from this module. Like map and filter it takes two parameters, a function and an iterable. However, it does not return another iterable, instead it returns a single value.
 **Example:1**
 
 ```py
+
+from functools import reduce
+
 numbers_str = ['1', '2', '3', '4', '5']  # iterable
 def add_two_nums(x, y):
     return int(x) + int(y)
