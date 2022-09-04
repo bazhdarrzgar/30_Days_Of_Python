@@ -16,10 +16,6 @@
 
 ## Exception Handling
 
-Python uses _try_ and _except_ to handle errors gracefully. A graceful exit (or graceful handling) of errors is a simple programming idiom - a program detects a serious error condition and "exits gracefully", in a controlled manner as a result. Often the program prints a descriptive error message to a terminal or log as part of the graceful exit, this makes our application more robust. The cause of an exception is often external to the program itself. An example of exceptions could be an incorrect input, wrong file name, unable to find a file, a malfunctioning IO device. Graceful handling of errors prevents our applications from crashing.
-
-We have covered the different Python _error_ types in the previous section. If we use _try_ and _except_ in our program, then it will not raise errors in those blocks.
-
 ![Try and Except](../images/try_except.png)
 
 ```py
@@ -38,8 +34,6 @@ except:
     print('Something went wrong')
 ```
 
-In the example above the second operand is a string. We could change it to float or int to add it with the number to make it work. But without any changes, the second block, _except_, will be executed.
-
 **Example:**
 
 ```py
@@ -55,10 +49,6 @@ except:
 ```sh
 Something went wrong
 ```
-
-In the above example, the exception block will run and we do not know exactly the problem. To analyze the problem, we can use the different error types with except.
-
-In the following example, it will handle the error and will also tell us the kind of error raised.
 
 ```py
 try:
@@ -79,9 +69,6 @@ Enter your name:Asabeneh
 Year you born:1920
 Type error occured
 ```
-
-In the code above the output is going to be _TypeError_.
-Now, let's add an additional block:
 
 ```py
 try:
@@ -125,10 +112,8 @@ except Exception as e:
 
 We use two operators:
 
-- \* for tuples
-- \*\* for dictionaries
-
-Let us take as an example below. It takes only arguments but we have list. We can unpack the list and changes to argument.
+- one start (\*) for tuples
+- two start (\*\*) for dictionaries
 
 ### Unpacking
 
@@ -142,8 +127,6 @@ lst = [1, 2, 3, 4, 5]
 print(sum_of_five_nums(lst)) # TypeError: sum_of_five_nums() missing 4 required positional arguments: 'b', 'c', 'd', and 'e'
 ```
 
-When we run the this code, it raises an error, because this function takes numbers (not a list) as arguments. Let us unpack/destructure the list.
-
 ```py
 def sum_of_five_nums(a, b, c, d, e):
     return a + b + c + d + e
@@ -151,8 +134,6 @@ def sum_of_five_nums(a, b, c, d, e):
 lst = [1, 2, 3, 4, 5]
 print(sum_of_five_nums(*lst))  # 15
 ```
-
-We can also use unpacking in the range built-in function that expects a start and an end.
 
 ```py
 numbers = range(2, 7)  # normal call with separate arguments
@@ -162,8 +143,6 @@ numbers = range(*args)  # call with arguments unpacked from a list
 print(numbers)      # [2, 3, 4, 5,6]
 
 ```
-
-A list or a tuple can also be unpacked like this:
 
 ```py
 countries = ['Finland', 'Sweden', 'Norway', 'Denmark', 'Iceland']
@@ -184,8 +163,6 @@ print(unpacking_person_info(**dct)) # Asabeneh lives in Finland, Helsinki. He is
 ```
 
 ### Packing
-
-Sometimes we never know how many arguments need to be passed to a python function. We can use the packing method to allow our function to take unlimited number or arbitrary number of arguments.
 
 ### Packing Lists
 
@@ -224,8 +201,6 @@ age = 250
 
 ## Spreading in Python
 
-Like in JavaScript, spreading is possible in Python. Let us check it in an example below:
-
 ```py
 lst_one = [1, 2, 3]
 lst_two = [4, 5, 6, 7]
@@ -238,8 +213,6 @@ print(nordic_countries)  # ['Finland', 'Sweden', 'Norway', 'Denmark', 'Iceland']
 ```
 
 ## Enumerate
-
-If we are interested in an index of a list, we use *enumerate* built-in function to get the index of each item in the list.
 
 ```py
 for index, item in enumerate([20, 30, 40]):
@@ -258,8 +231,6 @@ The country Finland has been found at index 1.
 ```
 
 ## Zip
-
-Sometimes we would like to combine lists when looping through them. See the example below:
 
 ```py
 fruits = ['banana', 'orange', 'mango', 'lemon', 'lime']                    
