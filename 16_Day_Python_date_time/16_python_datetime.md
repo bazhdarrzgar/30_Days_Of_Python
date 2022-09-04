@@ -1,22 +1,3 @@
-<div align="center">
-  <h1> 30 Days Of Python: Day 16 - Python Date time </h1>
-  <a class="header-badge" target="_blank" href="https://www.linkedin.com/in/asabeneh/">
-  <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
-  </a>
-  <a class="header-badge" target="_blank" href="https://twitter.com/Asabeneh">
-  <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/asabeneh?style=social">
-  </a>
-
-  <sub>Author:
-  <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-  <small>Second Edition: July, 2021</small>
-  </sub>
-
-</div>
-
-[<< Day 15](../15_Day_Python_type_errors/15_python_type_errors.md) | [Day 17 >>](../17_Day_Exception_handling/17_exception_handling.md)
-
-![30DaysOfPython](../images/30DaysOfPython_banner3@2x.png)
 - [📘 Day 16](#-day-16)
   - [Python *datetime*](#python-datetime)
     - [Getting *datetime* Information](#getting-datetime-information)
@@ -31,15 +12,11 @@
 
 ## Python *datetime*
 
-Python has got _datetime_ module to handle date and time.
-
 ```py
 import datetime
 print(dir(datetime))
 ['MAXYEAR', 'MINYEAR', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', 'date', 'datetime', 'datetime_CAPI', 'sys', 'time', 'timedelta', 'timezone', 'tzinfo']
 ```
-
-With dir or help built-in commands it is possible to know the available functions in a certain module. As you can see, in the datetime module there are many functions, but we will focus on _date_, _datetime_, _time_ and _timedelta_. Let se see them one by one.
 
 ### Getting *datetime* Information
 
@@ -58,6 +35,11 @@ print(day, month, year, hour, minute)
 print('timestamp', timestamp)
 print(f'{day}/{month}/{year}, {hour}:{minute}')  # 8/7/2021, 7:38
 ```
+<div align=center>
+
+  <img src="../images/timestamp.png" width=1000, height = 1200>
+
+</div>
 
 Timestamp or Unix timestamp is the number of seconds elapsed from 1st of January 1970 UTC.
 
@@ -79,6 +61,10 @@ print(f'{day}/{month}/{year}, {hour}:{minute}')  # 1/1/2020, 0:0
 ```
 
 Formatting date time using *strftime* method and the documentation can be found [here](https://strftime.org/).
+
+
+<img src="../images/strfdate.png" width=1000, height = 1200>
+
 
 ```py
 from datetime import datetime
@@ -108,6 +94,7 @@ Here are all the _strftime_ symbols we use to format time. An example of all the
 Here is a [documentation](https://www.programiz.com/python-programming/datetime/strptimet) hat helps to understand the format. 
 
 ```py
+
 from datetime import datetime
 date_string = "5 December, 2019"
 print("date_string =", date_string)
@@ -202,7 +189,3 @@ print("t3 =", t3)
    - Time series analysis
    - To get a timestamp of any activities in an application
    - Adding posts on a blog 
-
-🎉 CONGRATULATIONS ! 🎉
-
-[<< Day 15](../15_Day_Python_type_errors/15_python_type_errors.md) | [Day 17 >>](../17_Day_Exception_handling/17_exception_handling.md)
