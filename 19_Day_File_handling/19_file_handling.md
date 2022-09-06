@@ -21,10 +21,6 @@
 
 ## File Handling
 
-So far we have seen different Python data types. We usually store our data in different file formats. In addition to handling files, we will also see different file formats(.txt, .json, .xml, .csv, .tsv, .excel) in this section. First, let us get familiar with handling files with common file format(.txt).
-
-File handling is an import part of programming which allows us to create, read, update and delete files. In Python to handle data we use _open()_ built-in function.
-
 ```py
 # Syntax
 open('filename', mode) # mode(r, a, w, x, t,b)  could be to read, write, update
@@ -39,16 +35,10 @@ open('filename', mode) # mode(r, a, w, x, t,b)  could be to read, write, update
 
 ### Opening Files for Reading
 
-The default mode of _open_ is reading, so we do not have to specify 'r' or 'rt'. I have created and saved a file named reading_file_example.txt in the files directory. Let us see how it is done:
-
 ```py
 f = open('./files/reading_file_example.txt')
 print(f) # <_io.TextIOWrapper name='./files/reading_file_example.txt' mode='r' encoding='UTF-8'>
 ```
-
-As you can see in the example above, I printed the opened file and it gave  some information about it. Opened file has different reading methods: _read()_, _readline_, _readlines_. An opened file has to be closed with _close()_ method.
-
-- _read()_: read the whole text as string. If we want to limit the number of characters we want to read, we can limit it by passing int value to the *read(number)* method.
 
 ```py
 f = open('./files/reading_file_example.txt')
@@ -64,8 +54,6 @@ f.close()
 This is an example to show how to open a file and read.
 This is the second line of the text.
 ```
-
-Instead of printing all the text, let us print the first 10 characters of the text file.
 
 ```py
 f = open('./files/reading_file_example.txt')
@@ -113,8 +101,6 @@ f.close()
 ['This is an example to show how to open a file and read.\n', 'This is the second line of the text.']
 ```
 
-Another way to get all the lines as a list is using _splitlines()_:
-
 ```py
 f = open('./files/reading_file_example.txt')
 lines = f.read().splitlines()
@@ -128,8 +114,6 @@ f.close()
 <class 'list'>
 ['This is an example to show how to open a file and read.', 'This is the second line of the text.']
 ```
-
-After we open a file, we should close it. There is a high tendency of forgetting to close them. There is a new way of opening files using _with_ - closes the files by itself. Let us rewrite the the previous example with the _with_ method:
 
 ```py
 with open('./files/reading_file_example.txt') as f:
@@ -146,8 +130,6 @@ with open('./files/reading_file_example.txt') as f:
 
 ### Opening Files for Writing and Updating
 
-To write to an existing file, we must add a mode as parameter to the _open()_ function:
-
 - "a" - append - will append to the end of the file, if the file does not it creates a new file.
 - "w" - write - will overwrite any existing content, if the file does not exist it creates.
 
@@ -158,8 +140,6 @@ with open('./files/reading_file_example.txt','a') as f:
     f.write('This text has to be appended at the end')
 ```
 
-The method below creates a new file, if the file does not exist:
-
 ```py
 with open('./files/writing_file_example.txt','w') as f:
     f.write('This text will be written in a newly created file')
@@ -167,15 +147,11 @@ with open('./files/writing_file_example.txt','w') as f:
 
 ### Deleting Files
 
-We have seen in previous section, how to make and remove a directory using _os_ module. Again now, if we want to remove a file we use _os_ module.
-
 ```py
 import os
 os.remove('./files/example.txt')
 
 ```
-
-If the file does not exist, the remove method will raise an error, so it is good to use a condition like this:
 
 ```py
 import os
@@ -189,11 +165,7 @@ else:
 
 ### File with txt Extension
 
-File with _txt_ extension is a very common form of data and we have covered it in the previous section. Let us move to the JSON file
-
 ### File with json Extension
-
-JSON stands for JavaScript Object Notation. Actually, it is a stringified JavaScript object or Python dictionary.
 
 _Example:_
 
@@ -219,8 +191,6 @@ person_json = '''{
 
 ### Changing JSON to Dictionary
 
-To change a JSON to a dictionary, first we import the json module and then we use _loads_ method.
-
 ```py
 import json
 # JSON
@@ -245,8 +215,6 @@ Asabeneh
 ```
 
 ### Changing Dictionary to JSON
-
-To change a dictionary to a JSON we use _dumps_ method from the json module.
 
 ```py
 import json
@@ -282,8 +250,6 @@ print(person_json)
 
 ### Saving as JSON File
 
-We can also save our data as a json file. Let us save it as a json file using the following steps. For writing a json file, we use the json.dump() method, it can take dictionary, output file, ensure_ascii and indent.
-
 ```py
 import json
 # python dictionary
@@ -297,11 +263,7 @@ with open('./files/json_example.json', 'w', encoding='utf-8') as f:
     json.dump(person, f, ensure_ascii=False, indent=4)
 ```
 
-In the code above, we use encoding and indentation. Indentation makes the json file easy to read.
-
 ### File with csv Extension
-
-CSV stands for comma separated values. CSV is a simple file format used to store tabular data, such as a spreadsheet or database. CSV is a very common data format in data science.
 
 **Example:**
 
@@ -337,8 +299,6 @@ Number of lines:  2
 
 ### File with xlsx Extension
 
-To read excel files we need to install _xlrd_ package. We will cover this after we cover package installing using pip.
-
 ```py
 import xlrd
 excel_book = xlrd.open_workbook('sample.xls)
@@ -348,7 +308,6 @@ print(excel_book.sheet_names)
 
 ### File with xml Extension
 
-XML is another structured data format which looks like HTML. In XML the tags are not predefined. The first line is an XML declaration. The person tag is the root of the XML. The person has a gender attribute.
 **Example:XML**
 
 ```xml
