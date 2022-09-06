@@ -1,23 +1,3 @@
-<div align="center">
-  <h1> 30 Days Of Python: Day 18 - Regular Expressions </h1>
-  <a class="header-badge" target="_blank" href="https://www.linkedin.com/in/asabeneh/">
-  <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
-  </a>
-  <a class="header-badge" target="_blank" href="https://twitter.com/Asabeneh">
-  <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/asabeneh?style=social">
-  </a>
-
-  <sub>Author:
-  <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-  <small> First Edition: Nov 22 - Dec 22, 2019</small>
-  </sub>
-</div>
-</div>
-
-[<< Day 17](../17_Day_Exception_handling/17_exception_handling.md) | [Day 19>>](../19_Day_File_handling/19_file_handling.md)
-
-![30DaysOfPython](../images/30DaysOfPython_banner3@2x.png)
-
 - [📘 Day 18](#-day-18)
   - [Regular Expressions](#regular-expressions)
     - [The *re* Module](#the-re-module)
@@ -45,19 +25,13 @@
 
 ## Regular Expressions
 
-A regular expression or RegEx is a special text string that helps to find patterns in data. A RegEx can be used to check if some pattern exists in a different data type. To use RegEx in python first we should import the RegEx module which is called *re*.
-
 ### The *re* Module
-
-After importing the module we can use it to detect or find patterns.
 
 ```py
 import re
 ```
 
 ### Methods in *re* Module
-
-To find a pattern we use different set of *re* character sets that allows to search for a match in a string.
 
 * *re.match()*: searches only in the beginning of the first line of the string and returns matched objects if  found, else returns None. 
 * *re.search*: Returns a match object if there is one anywhere in the string, including multiline strings.
@@ -90,8 +64,6 @@ substring = txt[start:end]
 print(substring)       # I love to teach
 ```
 
-As you can see from the example above, the pattern we are looking for (or the substring we are looking for) is *I love to teach*. The match function returns an object **only** if the text starts with the pattern.
-
 ```py
 import re
 
@@ -99,8 +71,6 @@ txt = 'I love to teach python and javaScript'
 match = re.match('I like to teach', txt, re.I)
 print(match)  # None
 ```
-
-The string does not string with *I like to teach*, therefore there was no match and the match method returned None.
 
 #### Search
 
@@ -129,8 +99,6 @@ substring = txt[start:end]
 print(substring)       # first
 ```
 
-As you can see, search is much better than match because it can look for the pattern throughout the text. Search returns a match object with a first match that was found, otherwise it returns _None_. A much better *re* function is *findall*. This function checks for the pattern through the whole string and returns all the matches as a list.
-
 #### Searching for All Matches Using *findall*
 
 *findall()* returns all the matches as a list
@@ -144,9 +112,6 @@ matches = re.findall('language', txt, re.I)
 print(matches)  # ['language', 'language']
 ```
 
-As you can see, the word *language* was found two times in the string. Let us practice some more.
-Now we will look for both Python and python words in the string:
-
 ```py
 txt = '''Python is the most beautiful language that a human being has ever created.
 I recommend python for a first programming language'''
@@ -156,8 +121,6 @@ matches = re.findall('python', txt, re.I)
 print(matches)  # ['Python', 'python']
 
 ```
-
-Since we are using *re.I* both lowercase and uppercase letters are included. If we do not have the re.I flag, then we will have to write our pattern differently. Let us check it out:
 
 ```py
 txt = '''Python is the most beautiful language that a human being has ever created.
@@ -184,8 +147,6 @@ print(match_replaced)  # JavaScript is the most beautiful language that a human 
 match_replaced = re.sub('[Pp]ython', 'JavaScript', txt, re.I)
 print(match_replaced)  # JavaScript is the most beautiful language that a human being has ever created.
 ```
-
-Let us add one more example. The following string is really hard to read unless we remove the % symbol. Replacing the % with an empty string will clean the text.
 
 ```py
 
@@ -219,9 +180,6 @@ print(re.split('\n', txt)) # splitting using \n - end of line symbol
 ```
 
 ## Writing RegEx Patterns
-
-To declare a string variable we use a single or double quote. To declare RegEx variable *r''*.
-The following pattern only identifies apple with lowercase, to make it case insensitive either we should rewrite our pattern or we should add a flag.  
 
 ```py
 import re
@@ -271,11 +229,7 @@ print(matches)  # ['Apple', 'apple']
 
 ![Regular Expression cheat sheet](../images/regex.png)
 
-Let us use examples to clarify the meta characters above 
-
 ### Square Bracket
-
-Let us use square bracket to include lower and upper case
 
 ```py
 regex_pattern = r'[Aa]pple' # this square bracket mean either A or a
@@ -284,16 +238,12 @@ matches = re.findall(regex_pattern, txt)
 print(matches)  # ['Apple', 'apple']
 ```
 
-If we want to look for the banana, we write the pattern as follows:
-
 ```py
 regex_pattern = r'[Aa]pple|[Bb]anana' # this square bracket means either A or a
 txt = 'Apple and banana are fruits. An old cliche says an apple a day a doctor way has been replaced by a banana a day keeps the doctor far far away.'
 matches = re.findall(regex_pattern, txt)
 print(matches)  # ['Apple', 'banana', 'apple', 'banana']
 ```
-
-Using the square bracket and or operator , we manage to extract Apple, apple, Banana and banana.
 
 ### Escape character(\\) in RegEx
 
@@ -328,8 +278,6 @@ print(matches)  # ['and banana are fruits']
 
 ### Zero or more times(\*)
 
-Zero or many times. The pattern could may not occur or it can occur many times.
-
 ```py
 regex_pattern = r'[a].*'  # . any character, * any character zero or more times 
 txt = '''Apple and banana are fruits'''
@@ -338,8 +286,6 @@ print(matches)  # ['and banana are fruits']
 ```
 
 ### Zero or one time(?)
-
-Zero or one time. The pattern may not occur or it may occur once.
 
 ```py
 txt = '''I am not sure if there is a convention how to write the word e-mail.
@@ -350,8 +296,6 @@ print(matches)  # ['e-mail', 'email', 'Email', 'E-mail']
 ```
 
 ### Quantifier in RegEx
-
-We can specify the length of the substring we are looking for in a text, using a curly bracket. Let us imagine, we are interested in a substring with a length of 4 characters:
 
 ```py
 txt = 'This regular expression example was made on December 6,  2019 and revised on July 8, 2021'
@@ -450,7 +394,3 @@ distance = 8 -(-4) # 12
     I am a teacher and I love teaching There is nothing as more rewarding as educating and empowering people I found teaching more interesting than any other jobs Does this motivate you to be a teacher
     print(most_frequent_words(cleaned_text)) # [(3, 'I'), (2, 'teaching'), (2, 'teacher')]
     ```
-
-🎉 CONGRATULATIONS ! 🎉
-
-[<< Day 17](../17_Day_Exception_handling/17_exception_handling.md) | [Day 19>>](../19_Day_File_handling/19_file_handling.md)
