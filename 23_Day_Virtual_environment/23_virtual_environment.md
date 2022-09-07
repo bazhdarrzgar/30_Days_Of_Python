@@ -1,22 +1,3 @@
-<div align="center">
-  <h1> 30 Days Of Python: Day 23 - Virtual Environment </h1>
-  <a class="header-badge" target="_blank" href="https://www.linkedin.com/in/asabeneh/">
-  <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
-  </a>
-  <a class="header-badge" target="_blank" href="https://twitter.com/Asabeneh">
-  <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/asabeneh?style=social">
-  </a>
-
-<sub>Author:
-<a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-<small> Second Edition: July, 2021</small>
-</sub>
-</div>
-
-[<< Day 22](../22_Day_Web_scraping/22_web_scraping.md) | [Day 24 >>](../24_Day_Statistics/24_statistics.md)
-
-![30DaysOfPython](../images/30DaysOfPython_banner3@2x.png)
-
 - [📘 Day 23](#-day-23)
   - [Setting up Virtual Environments](#setting-up-virtual-environments)
   - [💻 Exercises: Day 23](#-exercises-day-23)
@@ -109,6 +90,3 @@ The necessary modules to work with flask are installed. Now, your project direct
 
 1. Create a project directory with a virtual environment based on the example given above.
 
-🎉 CONGRATULATIONS ! 🎉
-
-[<< Day 22](../22_Day_Web_scraping/22_web_scraping.md) | [Day 24 >>](../24_Day_Statistics/24_statistics.md)
