@@ -17,11 +17,6 @@
 
 ## Classes and Objects
 
-Python is an object oriented programming language. Everything in Python is an object, with its properties and methods. A number, string, list, dictionary, tuple, set etc. used in a program is an object of a corresponding built-in class. We create class to create an object. A class is like an object constructor, or a "blueprint" for creating objects. We instantiate a class to create an object. The class defines attributes and the behavior of the object, while the object, on the other hand, represents the class.
-
-We have been working with classes and objects right from the beginning of this challenge unknowingly. Every element in a Python program is an object of a class.
-Let us check if everything in python is a class:
-
 ```py
 asabeneh@Asabeneh:~$ python
 Python 3.9.6 (default, Jun 28 2021, 15:26:21)
@@ -52,8 +47,6 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 ### Creating a Class
 
-To create a class we need the key word **class** followed by the name and colon. Class name should be **CamelCase**.
-
 ```sh
 # syntax
 class ClassName:
@@ -74,8 +67,6 @@ print(Person)
 
 ### Creating an Object
 
-We can create an object by calling the class.
-
 ```py
 p = Person()
 print(p)
@@ -83,7 +74,6 @@ print(p)
 
 ### Class Constructor
 
-In the examples above, we have created an object from the Person class. However, a class without a constructor is not really useful in real applications. Let us use constructor function to make our class more useful. Like the constructor function in Java or JavaScript, Python has also a built-in **__init__**() constructor function. The **__init__** constructor function has self parameter which is a reference to the current instance of the class
 **Examples:**
 
 ```py
@@ -102,8 +92,6 @@ print(p)
 Asabeneh
 <__main__.Person object at 0x2abf46907e80>
 ```
-
-Let us add more parameters to the constructor function.
 
 ```py
 class Person:
@@ -134,8 +122,6 @@ Helsinki
 
 ### Object Methods
 
-Objects can have methods. The methods are functions which belong to the object.
-
 **Example:**
 
 ```py
@@ -159,8 +145,6 @@ Asabeneh Yetayeh is 250 years old. He lives in Helsinki, Finland
 ```
 
 ### Object Default Methods
-
-Sometimes, you may want to have a default values for your object methods. If we give default values for the parameters in the constructor, we can avoid errors when we call or instantiate our class without parameters. Let's see how it looks:
 
 **Example:**
 
@@ -189,8 +173,6 @@ John Doe is 30 years old. He lives in Noman city, Nomanland.
 ```
 
 ### Method to Modify Class Default Values
-
-In the example below, the person class, all the constructor parameters have default values. In addition to that, we have skills parameter, which we can access using a method. Let us create add_skill method to add skills to the skills list.
 
 ```py
 class Person:
@@ -228,9 +210,6 @@ John Doe is 30 years old. He lives in Noman city, Nomanland.
 
 ### Inheritance
 
-Using inheritance we can reuse parent class code. Inheritance allows us to define a class that inherits all the methods and properties from parent class. The parent class or super or base class is the class which gives all the methods and properties. Child class is the class that inherits from another or parent class.
-Let us create a student class by inheriting from person class.
-
 ```py
 class Student(Person):
     pass
@@ -259,9 +238,6 @@ Eyob Yetayeh is 30 years old. He lives in Helsinki, Finland.
 Lidiya Teklemariam is 28 years old. He lives in Espoo, Finland.
 ['Organizing', 'Marketing', 'Digital Marketing']
 ```
-
-We did not call the **__init__**() constructor in the child class. If we didn't call it then we can still access all the properties from the parent. But if we do call the constructor we can access the parent properties by calling _super_.  
-We can add a new method to the child or we can override the parent class methods by creating the same method name in the child class. When we add the **__init__**() function, the child class will no longer inherit the parent's **__init__**() function.
 
 ### Overriding parent method
 
@@ -295,8 +271,6 @@ Eyob Yetayeh is 30 years old. He lives in Helsinki, Finland.
 Lidiya Teklemariam is 28 years old. She lives in Espoo, Finland.
 ['Organizing', 'Marketing', 'Digital Marketing']
 ```
-
-We can use super() built-in function or the parent name Person to automatically inherit the methods and properties from its parent. In the example above we override the parent method. The child method has a different feature, it can identify, if the gender is male or female and assign the proper pronoun(He/She).
 
 🌕 Now, you are fully charged with a super power of programming.  Now do some exercises for your brain and muscles.
 
