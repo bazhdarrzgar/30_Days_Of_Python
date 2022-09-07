@@ -347,22 +347,45 @@ with open('sample.json', 'w', encoding='utf-8') as f:
     
 print('========================== File with csv Extension ==========================')
 
+'''
+# Syntax
+
+## importing csv module to read the function that come with working with csv file
+
+import csv
+
+## read the line csv file
+
+csv.reader('file_name.csv', functionality...)
+
+## sperate the line by something while read the csv file
+
+csv.reader('file_name.csv', delimiter = ',')
+
+'''
+
 import csv
 
 with open('amex.csv') as f:
-    csv_reader = csv.reader(f, delimiter=',') # w use, reader method to read csv
-    line_count = 0
+    csv_reader = csv.reader(f, delimiter=',') #
 
+    line_count = 0
     for row in csv_reader:
         if line_count == 0:
+            # join the row using join function ( join() )
             print(f'Column names are :{", ".join(row)}')
+            # we count the line
             line_count += 1
+
         else:
-            print(
-                f'\t{row[0]} is a teachers. He lives in {row[1]}, {row[2]}.')
+            # calling the column by calling index of that column
+            print(f'\t{row[0]} is a teachers. He lives in {row[1]}, {row[2]}.')
+            # we count the line
             line_count += 1
 
     print(f'Number of lines:  {line_count}')
+
+
 
 '''
 Column names are :Symbol, Name, LastSale, MarketCap, IPOyear, Sector, industry, Summary Quote, 
@@ -381,19 +404,19 @@ print('========================== File with xlsx Extension =====================
 '''
 # Syntax
 
-## Open xls file
+## Open xls (sheet) file
 
-xlrd.open_workbook('name_file.xls')
+xlrd.open_workbook('name_file.xls') # xlrd = sheet read   # open_workbook = open work book
 
 
 ## printing number of column
 
-xlrd.open_workbook('name_file.xls').nsheets
+xlrd.open_workbook('name_file.xls').nsheets   # nsheets = number sheets
 
 
 ## printing name of sheet
 
-xlrd.open_workbook('name_file.xls').names
+xlrd.open_workbook('name_file.xls').names  # names = name sheet
 
 '''
 
@@ -409,6 +432,8 @@ print(excel_book.sheet_names) # <bound method Book.sheet_names of <xlrd.book.Boo
 
 
 print('========================== File with xml Extension ==========================')
+
+# this is the file xml we use in this demo
 
 '''
 
@@ -430,18 +455,51 @@ print('========================== File with xml Extension ======================
 
 
 
-import xml.etree.ElementTree as ET
+'''
+# Syntax
 
-tree = ET.parse('sample4.xml')
+## import the xml provider for python
+import xml.etree.ElementTree as et
+
+
+## (open file xml) using ( xml.etree.ElementTree.parse('file_name.xml') ) function
+
+tree = et.parse('file_name.xml')
+
+
+## calling (all the root content of xml) using ( xml.etree.ElementTree.parse('file_name.xml').getroot() ) function
+
+root = root.getroot()
+
+
+## calling (tag) of xml using (tag) keyword like this ( xml.etree.ElementTree.parse('file_name.xml').getroot().tag )
+
+root.tag
+
+
+## calling (attribute) of xml using (attrib) keyword like this ( xml.etree.ElementTree.parse('file_name.xml').getroot.attrib )
+
+root.attrib
+
+
+## calling child of xml using for loop with (tag) keyword
+
+for put_me in send_root
+    print(put_me.tag)
+
+'''
+
+import xml.etree.ElementTree as et
+
+tree = et.parse('sample4.xml')
 root = tree.getroot()
-print('Root tag:', root.tag)
-print('Attribute:', root.attrib)
+print('Root tag:', root.tag) # Root tag: person
+print('Attribute:', root.attrib) # Attribute: {'gender': 'female'}
+
 for child in root:
     print('field: ', child.tag)
 
 '''
-Root tag: person
-Attribute: {'gender': 'female'}
 field:  name
 field:  country
 field:  city
