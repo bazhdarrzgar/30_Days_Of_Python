@@ -19,12 +19,8 @@
 ### What is PIP ?
 
 PIP stands for Preferred installer program. We use _pip_ to install different Python packages.
-Package is a Python module that can contain one or more modules or other packages. A module or modules that we can install to our application is a package.
-In programming, we do not have to write every utility program, instead we install packages and import them to our applications.
 
 ### Installing PIP
-
-If you did not install pip, let us install it now. Go to your terminal or command prompt and copy and paste this:
 
 ```sh
 asabeneh@Asabeneh:~$ pip install pip
@@ -41,10 +37,6 @@ asabeneh@Asabeneh:~$ pip --version
 pip 21.1.3 from /usr/local/lib/python3.7/site-packages/pip (python 3.9.6)
 ```
 
-As you can see, I am using pip version 21.1.3, if you see some number a bit below or above that, means you have pip installed.
-
-Let us check some of the packages used in the Python community for different purposes. Just to let you know that there are lots of packages available for use with different applications.
-
 ### Installing packages using pip
 
 Let us try to install _numpy_, called numeric python. It is one of the most popular packages in machine learning and data science community.
@@ -58,8 +50,6 @@ Let us try to install _numpy_, called numeric python. It is one of the most popu
 ```sh
 asabeneh@Asabeneh:~$ pip install numpy
 ```
-
-Let us start using numpy. Open your python interactive shell, write python and then import numpy as follows:
 
 ```py
 asabeneh@Asabeneh:~$ python
@@ -96,8 +86,6 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> import pandas
 ```
 
-This section is not about numpy nor pandas, here we are trying to learn how to install packages and how to import them. If it is needed, we will talk about different packages in other sections.
-
 Let us import a web browser module, which can help us to open any website. We do not need to install this module, it is already installed by default with Python 3. For instance if you like to open any number of websites at any time or if you like to schedule something, this _webbrowser_ module can be used.
 
 ```py
@@ -117,8 +105,6 @@ for url in url_lists:
 ```
 
 ### Uninstalling Packages
-
-If you do not like to keep the installed packages, you can remove them using the following command.
 
 ```sh
 pip uninstall packagename
@@ -201,14 +187,7 @@ Pygments==1.6
 Sphinx==1.2.2
 ```
 
-The pip freeze gave us the packages used, installed and their version. We use it with requirements.txt file for deployment.
-
 ### Reading from URL
-
-By now you are familiar with how to read or write on a file located on you local machine. Sometimes, we would like to read from a website using url or from an API.
-API stands for Application Program Interface. It is a means to exchange structured data between servers primarily as json data. To open a network connection, we need a package called _requests_ - it allows to open a network connection and to implement CRUD(create, read, update and delete) operations. In this section, we will cover only reading ore getting part of a CRUD.
-
-Let us install _requests_:
 
 ```py
 asabeneh@Asabeneh:~$ pip install requests
@@ -240,11 +219,9 @@ print(response.text) # gives all the text from the page
 {'date': 'Sun, 08 Dec 2019 18:00:31 GMT', 'last-modified': 'Fri, 07 Nov 2003 05:51:11 GMT', 'etag': '"17e9-3cb82080711c0;50c0b26855880-gzip"', 'accept-ranges': 'bytes', 'cache-control': 'max-age=31536000', 'expires': 'Mon, 07 Dec 2020 18:00:31 GMT', 'vary': 'Accept-Encoding', 'content-encoding': 'gzip', 'access-control-allow-origin': '*', 'content-length': '1616', 'content-type': 'text/plain', 'strict-transport-security': 'max-age=15552000; includeSubdomains; preload', 'content-security-policy': 'upgrade-insecure-requests'}
 ```
 
-- Let us read from an API. API stands for Application Program Interface. It is a means to exchange structure data between servers primarily a json data. An example of an API:https://restcountries.eu/rest/v2/all. Let us read this API using _requests_ module.
-
 ```py
 import requests
-url = 'https://restcountries.eu/rest/v2/all'  # countries api
+url = 'https://restcountries.com/v3.1/all'  # countries api
 response = requests.get(url)  # opening a network and fetching a data
 print(response) # response object
 print(response.status_code)  # status code, success:200
@@ -304,15 +281,7 @@ print(countries[:1])  # we sliced only the first country, remove the slicing to 
                    'pt': 'Afeganistão'}}]
 ```
 
-We use _json()_ method from response object, if the we are fetching JSON data. For txt, html, xml and other file formats we can use _text_.
-
 ### Creating a Package
-
-We organize a large number of files in different folders and sub-folders based on some criteria, so that we can find and manage them easily. As you know, a module can contain multiple objects, such as classes, functions, etc. A package can contain one or more relevant modules. A package is actually a folder containing one or more module files. Let us create a package named mypackage, using the following steps:
-
-Create a new folder named mypacakge inside 30DaysOfPython folder
-Create an empty **__init__**.py file in the mypackage folder.
-Create modules arithmetic.py and greet.py with following code:
 
 ```py
 # mypackage/arithmetics.py
