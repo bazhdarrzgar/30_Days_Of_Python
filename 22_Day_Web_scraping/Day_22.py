@@ -102,9 +102,9 @@ print(response.status_code)
 
 # 'table' # we are finding all the content that is inside the (table) tag
 # 'cellpadding' : '3' # we are only targetting 3 cell of the table 
-# all the data is come to as in one row and none format
+    # cellpadding : '3' # if you look at the first column you know that each of this data has other table that is 3 row this is why we use 3 for cellpadding for row of index 0
 tables = soup.find_all('table', {'cellpadding' : '3'})
-table = tables[0] # all the data is provided in one row this is why we just specify the index [0] only # the result is a list, we are taking out data from it
+table = tables[0] # this is for row first or row in index [0] this row has other table inside it that contain 3 cell padding 
 # by using this data that we get, we find all   <tr>   tag and we want find all the tag   <td>   inside this tag
 # this is done by using   ( find() )  function with   <tr>  tag and (find_all) keyword with   <td>   tag
 # it is mean find    <tr>   tag and find all the tag that is   <td>   tag inside   <tr>   tag
