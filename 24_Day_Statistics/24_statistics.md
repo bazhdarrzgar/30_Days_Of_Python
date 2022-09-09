@@ -525,7 +525,7 @@ two_dimension_array[::]
 ```
 
 ```py
-# Numpy Zeroes
+# Numpy Ones
 numpy_ones = np.ones((3,3),dtype=int,order='C')
 print(numpy_ones)
 ```
