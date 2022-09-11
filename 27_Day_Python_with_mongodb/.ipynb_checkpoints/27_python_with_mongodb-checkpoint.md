@@ -174,8 +174,6 @@ import os # importing operating system module
 MONGODB_URI = 'mongodb+srv://asabeneh:your_password_goes_here@30daysofpython-twxkr.mongodb.net/test?retryWrites=true&w=majority'
 client = pymongo.MongoClient(MONGODB_URI)
 
-db = client.thirty_days_of_python
-
 students = [
         {'name':'David','country':'UK','city':'London','age':34},
         {'name':'John','country':'Sweden','city':'Stockholm','age':28},

@@ -11,7 +11,7 @@ def sentiment(sentence):
     nltk.download('vader_lexicon')
     sid = SentimentIntensityAnalyzer()
     score = sid.polarity_scores(sentence)['compound']
-    if(score>0):
+    if(score > 0):
         return "Positive"
     else:
         return "Negative"
@@ -23,7 +23,7 @@ def sentimentRequest():
         sent = sentiment(sentence)
         output['sentiment'] = sent
         return jsonify(output)
-    else:
+    else:   
         sentence = request.args.get('q')
         sent = sentiment(sentence)
         print(sentence)
